@@ -31,9 +31,9 @@ namespace :dev do
     Comment.destroy_all
     Restaurant.all.each do |restaurant|
       3.times do |i|
-        Comment.create!(content: FFaker::LoremJA.sentence,
-          restaurant_id: restaurant.id,
-          user_id: User.last.id
+        restaurant.comments.create!(
+          content: FFaker::LoremJA.sentence,
+          user: User.all.sample
           )
       end
     end
