@@ -8,4 +8,6 @@ class User < ApplicationRecord
   end
 
   has_many :comments
+
+  mount_uploader :avatar, AvatarUploader
 end
