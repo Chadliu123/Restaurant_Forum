@@ -22,3 +22,32 @@
   float: none;
   display: inline-block;
 }
+
+.panel a:hover .my-restaurant {
+  background-color: #eee;
+  text-decoration: none;
+}
+
+.my-restaurant {
+  display: inline-block;
+  padding: 8px;
+  text-align: center;
+}
+
+.panel-default > .panel-heading {
+  color: white;
+  background-color: #337ab7;
+  border-color: #ddd;
+}
+
+.my-restaurant > div {
+  height: 70px;
+}
+
+.my-restaurant img {
+  max-height: 100%;
+}
+
+* {
+text-decoration: none !important;
+}
