@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
     get  :feeds, :on => :collection
     get  :dashboard, :on => :member
+    post :favorite, :on => :member
+    post :unfavorite, :on => :member
   end
 
   resources :users, only: [:show, :edit, :update]
