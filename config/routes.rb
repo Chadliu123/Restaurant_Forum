@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     post :unfavorite, :on => :member
     post :like, :on => :member
     post :unlike, :on => :member
+    get  :ranking, :on => :collection
   end
 
   resources :users, only: [:show, :edit, :update]
