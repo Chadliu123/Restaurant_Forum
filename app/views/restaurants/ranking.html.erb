@@ -1,0 +1,11 @@
+<h1>TOP 10人氣最高餐廳<small>(收藏數最高)</small></h1>
+
+<% @restaurants.each do |restaurant| %>
+  <%= image_tag "http://via.placeholder.com/100x100", class: "img-responsive" %>
+  <h4><%= restaurant.name %></h4>
+  <span>收藏數：<%= restaurant.favorites_count %></span>
+  <p><%= truncate(restaurant.description, length: 200) %></p>
+  <%= link_to 'Show', restaurant_path(restaurant), class: "btn btn-primary" %>
+  <%= render partial: 'shared/favorite', locals: { restaurant: restaurant } %>
+  <hr>
+<% end %>
