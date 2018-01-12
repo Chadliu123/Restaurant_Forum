@@ -48,6 +48,6 @@
   max-height: 100%;
 }
 
-* {
-text-decoration: none !important;
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  text-decoration:none; 
 }
