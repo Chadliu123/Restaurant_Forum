@@ -21,7 +21,11 @@ Rails.application.routes.draw do
 
   resources :followships, only: [:create, :destroy]
 
-  resources :friendships, only: [:create, :destroy]
+  resources :friendships, only: [:create, :destroy] do
+    post :cancel, :on => :member
+    post :accept, :on => :member
+    get :check, :on => :member
+  end
 
   namespace :admin do
     resources :restaurants
