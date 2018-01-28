@@ -15,7 +15,9 @@ Rails.application.routes.draw do
     get  :ranking, :on => :collection
   end
 
-  resources :users, only: [:index, :show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update] do
+    get :friend_list, :on => :member
+  end
 
   resources :followships, only: [:create, :destroy]
 
