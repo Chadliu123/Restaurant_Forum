@@ -37,20 +37,10 @@
           <div class="caption">
             <h4><%= link_to user.name, user_path(user) %></h4>
             <%= render partial: "shared/follow", locals: {user: user} %>
+            <%= render partial: "shared/friend", locals: {user: user} %>
           </div>
         </div>
       </div>
       <% end %>
   </div>
 </div>
-
-<ul>
-
-  <% @users.each do |user| %>
-    <li>
-      <%= user.name %>
-      <%= render partial: "shared/friend", locals: {user: user} %>
-    </li>
-  <% end %>
-
-</ul>
