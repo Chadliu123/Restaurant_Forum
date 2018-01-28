@@ -11,4 +11,11 @@ class FriendshipsController < ApplicationController
     end
   end
 
+  def destroy
+    @friendship = current_user.friendships.where(friending_id: params[:id]).first
+    @friendship.destroy
+    flash[:alert] = "取消對#{User.find_by(id: params[:id]).name}的好友邀請！"
+    redirect_back(fallback_location: root_path)
+  end
+
 end

@@ -50,6 +50,7 @@
     <li>
       <%= user.name %>
       <%= link_to 'Friend', friendships_path(friending_id: user), method: :post %>
+      <%= link_to 'Unfriend', friendship_path(user), method: :delete %>
     </li>
   <% end %>
 
