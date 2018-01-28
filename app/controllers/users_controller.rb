@@ -28,6 +28,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def friend_list
+    @user = User.find(params[:id])
+     # @friendings = @user.friendings
+     # @frienders = @user.frienders
+    @all_friends = (@user.friendings + @user.friends).uniq
+  end
+
 
   private
 

@@ -1,1 +1,17 @@
 <h1>friend list</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @all_friends.count %>位美食家好友</h3>
+  </div>
+  <ul class="list-group">
+    <% @all_friends.each do |friending| %>
+    <li class="list-group-item">
+      <%= link_to friend_list_user_path(friending) do %>
+      <%= image_tag "http://via.placeholder.com/30x30", class: "img-circle" %>
+      <%= friending.name %>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
+</div>
