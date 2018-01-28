@@ -43,3 +43,14 @@
       <% end %>
   </div>
 </div>
+
+<ul>
+
+  <% @users.each do |user| %>
+    <li>
+      <%= user.name %>
+      <%= link_to 'Friend', friendships_path(friending_id: user), method: :post %>
+    </li>
+  <% end %>
+
+</ul>
