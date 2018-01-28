@@ -54,4 +54,12 @@ class User < ApplicationRecord
     self.friends(user)
   end
 
+  def friend?(user)
+    self.friends.include?(user)
+  end
+
+  def inverse_friend?(user)
+    self.inverse_friends.include?(user)
+  end
+
 end
